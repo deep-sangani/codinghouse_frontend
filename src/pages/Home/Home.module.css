@@ -1,0 +1,57 @@
+.home {
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: #1d1d1d;
+  max-width: 90%;
+  width: 70vh;
+  height: 50vh;
+  border-radius: 20px;
+  padding: 10px;
+}
+.heading {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.heading h3 {
+  margin-left: 20px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.content p {
+  text-align: center;
+  width: 70%;
+  line-height: 150%;
+  font-size: 18px;
+  color: #c4c5c5;
+}
+
+.linksignin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #0077ff;
+  margin-top: 30px;
+}
+.linksignin span {
+  margin-left: 10px;
+  font-weight: 600;
+}
+.linksignin p {
+  font-size: 14px;
+}

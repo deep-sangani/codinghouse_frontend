@@ -1,0 +1,32 @@
+.mainWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  flex-direction: column;
+}
+
+.wrapper {
+  width: fit-content;
+}
+
+.buttonWrap {
+  padding: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.buttonWrap button {
+  margin: 10px;
+  background-color: #262626;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.buttonWrap .buttonActive {
+  background-color: #0077ff;
+}
