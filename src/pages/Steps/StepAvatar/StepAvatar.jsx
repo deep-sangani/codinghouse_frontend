@@ -6,7 +6,8 @@ import { useDispatch } from "react-redux";
 import {setAvatar} from "../../../store/activate-slice";
 import {userActivate} from "../../../http";
 import {setAuth} from "../../../store/user-slice";
-export const StepAvatar = ({onNext}) => {
+
+export const StepAvatar = () => {
   const fullname = useSelector(state=>state.activate.name);
   const dispatch = useDispatch();
   const [imgurl,setImgurl] = useState("/images/defaultprofile.png"); 
@@ -27,7 +28,7 @@ export const StepAvatar = ({onNext}) => {
     try {
       const {data} = await userActivate({fullname,avatar:imgurl});
       dispatch(setAuth(data));
-      onNext();
+      
     } catch (error) {
       console.log(error);
     }

@@ -16,7 +16,7 @@ export const StepOtp = ({ onNext }) => {
   useEffect(async() => {
     const OTP = otp.join("");
     console.log(OTP);
-    if(otp.every((ele)=>ele!== null)){
+    if(!otp.some(element => element === null)){
       await submit();
     }
   }, [otp]);

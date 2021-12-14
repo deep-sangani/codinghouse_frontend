@@ -8,19 +8,23 @@ import { Login } from "./pages/Login/Login";
 import { Register } from "./pages/Register/Register";
 import { Rooms } from "./pages/Rooms/Rooms";
 import {useSelector} from "react-redux";
+import { useLoadingWithRefresh } from "./hooks/useLoadingWithRefresh";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Navigation />
-      <Routes>
-        <Route path="/" element={<Home />} exact />
-        <Route path="/register" element={<Register />} exact />
-        <Route path="/authenticate" element={<GuestRoute />} />
-        <Route path="/rooms" element={<ActivateRoute />} exact />
-      </Routes>
-    </BrowserRouter>
-  );
+  const {loading} = useLoadingWithRefresh();
+  // call refresh endpoint
+  return loading?("Loading"):
+    (
+      <BrowserRouter>
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Home />} exact />
+          <Route path="/register" element={<Register />} exact />
+          <Route path="/authenticate" element={<GuestRoute />} />
+          <Route path="/rooms" element={<ActivateRoute />} exact />
+        </Routes>
+      </BrowserRouter>
+    );
 }
 
 const GuestRoute = () => {
